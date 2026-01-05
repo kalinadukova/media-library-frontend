@@ -45,7 +45,7 @@ provides:
 Create a `.env` file in the project root.
 
 ```env
-VITE_API_BASE_URL = http://localhost:3000
+VITE_API_BASE_URL=http://localhost:8080/api/v1/
 ```
 
 **Note:** With Vite, only environment variables prefixed with VITE_ are exposed to the client.
