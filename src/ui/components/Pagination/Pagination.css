@@ -1,0 +1,48 @@
+.pagination-wrapper {
+  display: flex;
+  align-self: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.pagination-icon-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.pagination-icon-wrapper.disabled {
+  color: lightgray;
+}
+
+.pagination-range {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  height: 2rem;
+}
+
+.pagination-range div {
+  cursor: pointer;
+}
+
+.pagination-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.pagination-number__active {
+  background: var(--text-primary);
+  color: var(--white);
+  border-radius: var(--border-full);
+}
+
+.dots {
+  width: 2rem;
+  text-align: center;
+}
