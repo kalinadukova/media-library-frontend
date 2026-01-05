@@ -1,27 +1,27 @@
 /* variables */
 :root {
   /* main colors */
-  --primary: #235347;
-  --secondary: #193f36;
+  --primary: #bfa6ed;
+  --secondary: #ba9fed;
   --background: #fff;
-  --background-secondary: #eff6f4;
-  --background-modal-primary: #c9ded9;
+  --background-secondary: #e9e4f2;
+  --background-modal-primary: #cfc0eb;
   /* gray */
   --lightGray: #ebe8e8;
   --darkGray: #b5c6c2;
   /* text colors */
-  --heading-primary: #235347;
-  --text-primary: #222e50;
+  --heading-primary: #1c0547;
+  --text-primary: #1c0547;
   --text-secondary: #fff;
-  --text-button: #235347;
+  --text-button: #1c0547;
   /* button */
-  --button-primary: #00d09c;
-  --button-secondary: #eff6f4;
+  --button-primary: #1c0547;
+  --button-secondary: #cfc0eb;
   --button-text-primary: #fff;
-  --button-toggle: #00d09c;
+  --button-toggle: #1c0547;
   /* other */
   --input-background: #fff;
-  --input-text: #222e50;
+  --input-text: #1c0547;
   --dark: #1a1f33;
   --white: #ffffff;
   --success: #4caf50;
@@ -36,4 +36,42 @@
   --border-2xl: 1rem;
   --border-3xl: 1.5rem;
   --border-full: 100%;
+}
+
+/* fonts */
+@font-face {
+  font-family: "ManropeLight";
+  src: url("./assets/fonts/Manrope-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ManropeBold";
+  src: url("./assets/fonts/Manrope-Bold.ttf");
+  font-weight: bold;
+}
+
+html {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  color: var(--text-primary);
+}
+
+a, a:visited, a:hover, a:active {
+  color: var(--text-primary);
 }
