@@ -1,12 +1,8 @@
-import './App.css'
+import "./App.css";
+import Router from "./router/Router.tsx";
 
 function App() {
-
-  return (
-    <div>
-        <p>React app</p>
-    </div>
-  )
+  return <Router />;
 }
 
-export default App
+export default App;
