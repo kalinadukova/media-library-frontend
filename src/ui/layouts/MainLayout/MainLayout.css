@@ -1,0 +1,29 @@
+.main-layout-wrapper {
+  height: 100vh;
+  display: flex;
+  background: var(--background-secondary);
+  gap: 2rem;
+}
+
+.main-layout-content {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: var(--white);
+  border-top-left-radius: var(--border-2xl);
+  border-bottom-left-radius: var(--border-2xl);
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-layout-wrapper {
+    flex-direction: column;
+  }
+
+  .main-layout-content {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--border-2xl);
+  }
+}
