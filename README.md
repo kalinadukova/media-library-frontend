@@ -45,7 +45,7 @@ provides:
 Create a `.env` file in the project root.
 
 ```env
-VITE_API_BASE_URL="http://localhost:3000"
+VITE_API_BASE_URL = http://localhost:3000
 ```
 
 **Note:** With Vite, only environment variables prefixed with VITE_ are exposed to the client.
@@ -57,22 +57,22 @@ VITE_API_BASE_URL="http://localhost:3000"
 **Development**
 
 ```bash
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
 **Production**
 
 ```bash
-npm install
-npm run build
+yarn install
+yarn build
 ```
 
 ---
 
 ## 6. Available Scripts
 
-- npm run dev — start local development server
-- npm run build — build for production
-- npm run preview — preview production build
-- npm run test — run tests 
+- yarn dev — start local development server
+- yarn build — build for production
+- yarn preview — preview production build
+- yarn test — run tests 

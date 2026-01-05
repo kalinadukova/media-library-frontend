@@ -3,7 +3,7 @@ import { createPersistedStore } from "./createPersistedStore.ts";
 import type { User, UserStore } from "../types/user.ts";
 
 const initialUser: User = {
-  id: 0,
+  id: "",
   email: "",
   token: "",
 };
