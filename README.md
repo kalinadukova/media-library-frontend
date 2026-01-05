@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Media Library UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for the Media Library API — allows users to register/login, upload images, browse their personal
+asset library, filter/search by tags and metadata, create shareable links, and delete assets.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Project Overview
 
-## React Compiler
+This frontend is the user-facing web app for the **Media Library** system. It connects to the backend REST API and
+provides:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User authentication (register + login)
+- Personal asset library (paginated)
+- Upload of image assets (multipart/form-data)
+- Filtering assets by:
+    - tags
+    - MIME type
+    - exact creation date (YYYY-MM-DD)
+- Share link generation for an asset (expiring link)
+- Deleting owned assets
 
-## Expanding the ESLint configuration
+> Note: Backend endpoints are under `/api/v1/...` and require JWT Bearer auth for asset operations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 2. Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React + TypeScript**
+- **Vite**
+- **Axios**
+- **React Router**
+- **TanStack Query**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 3. Prerequisites
+
+- **Node.js** (v18+ recommended)
+- A running instance of the **Media Library API**
+- Package manager: **npm** (or yarn / pnpm)
+
+---
+
+## 4. Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+VITE_API_BASE_URL="http://localhost:3000"
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Note:** With Vite, only environment variables prefixed with VITE_ are exposed to the client.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 5. Setup and Run
+
+**Development**
+
+```bash
+npm install
+npm run dev
 ```
+
+**Production**
+
+```bash
+npm install
+npm run build
+```
+
+---
+
+## 6. Available Scripts
+
+- npm run dev — start local development server
+- npm run build — build for production
+- npm run preview — preview production build
+- npm run test — run tests 
